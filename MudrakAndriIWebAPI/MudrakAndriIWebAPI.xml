@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MudrakAndriIWebAPI</name>
+    </assembly>
+    <members>
+        <member name="M:MudrakAndriIWebAPI.Controllers.BookController.Get">
+            <summary>
+            Load information about all books
+            </summary>
+            <returns>Information about all books</returns>
+            <response code="200">Returns information about all books</response>
+            <response code="400">If url which you are sending is not valid</response>
+            <response code="404">If the information about books is null</response>
+        </member>
+        <member name="M:MudrakAndriIWebAPI.Controllers.BookController.Get(System.Int32)">
+            <summary>
+            Load information about specific book
+            </summary>
+            <param name="bookId">book id for searching </param>
+            <returns>Information about specific book</returns>
+            <response code="200">Returns information about specific book</response>
+            <response code="400">If url which you are sending is not valid</response>
+            <response code="404">If the information about book is null</response>
+        </member>
+        <member name="M:MudrakAndriIWebAPI.Controllers.BookController.Create(BLL.DTOs.BookDTO)">
+             <summary>
+             Post information about specific book
+             </summary>
+             <remarks>
+             Sample request:
+             
+                 POST /Create
+                 {
+                    "title": "Harry Potter",
+                    "author": "J. K. Rowling",
+                 }
+            
+             </remarks>
+             <param name="book">Object of book for publication</param>
+             <response code="200">The POST request has been successfully processed</response>
+             <response code="400">If url which you are sending is not valid</response>
+        </member>
+        <member name="M:MudrakAndriIWebAPI.Controllers.BookController.Update(BLL.DTOs.BookDTO)">
+            <summary>
+            Put information about specific book
+            </summary>
+            <remarks>
+            Sample request:
+              
+                PUT /Update
+                {
+                   "id":"1"    
+                   "title": "New Harry Potter",
+                   "author": "New J. K. Rowling",
+                }
+            Where "id" already exists 
+            </remarks>
+            <param name="book">Object of book for updating</param>
+            <response code="200">The PUT request has been successfully processed</response>
+            <response code="400">If url which you are sending is not valid</response>
+        </member>
+        <member name="M:MudrakAndriIWebAPI.Controllers.BookController.Delete(System.Int32)">
+            <summary>
+            Delete information about specific book
+            </summary>
+            <param name="bookId">book id for deleting</param>
+            <response code="200">The DELETE request has been successfully processed</response>
+            <response code="400">If url which you are sending is not valid</response>
+        </member>
+    </members>
+</doc>
